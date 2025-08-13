@@ -1,11 +1,8 @@
 {
   boot.loader = {
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot";
-    };
     grub = {
-      efiSupport = true;
+      enable = true;
+      efiSupport = false;
       device = "/dev/vda";
     };
   };

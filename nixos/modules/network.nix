@@ -8,10 +8,15 @@
             prefixLength = 32;
           }
         ];
+        routes = [
+          {
+            address = "0.0.0.0";
+            prefixLength = 0;
+            via = "10.0.0.1";
+          }
+        ];
       };
     };
-
-    defaultGateway = "10.0.0.1";
 
     nameservers = [
       "188.93.16.19"
