@@ -15,9 +15,6 @@
   in {
     nixosConfigurations."tulip-utahlite13742" = nixpkgs.lib.nixosSystem {
       specialArgs = {
-        pkgs = import nixpkgs {
-          inherit system;
-        };
         inherit inputs system;
       };
       modules = [ 
