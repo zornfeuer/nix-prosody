@@ -8,11 +8,8 @@
           type = "gpt";
           partitions = {
             bios = {
-              name = "BIOS";
               size = "1M";
-              content = {
-                type = "bios_grub";
-              };
+              type = "EF02";
             };
             ESP = {
               type = "EF00";
