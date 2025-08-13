@@ -25,7 +25,7 @@
       ];
     };
 
-    homeConfigurations.zornfeuer = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations."prosody-op" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
       modules = [
         ./home-manager/home.nix
