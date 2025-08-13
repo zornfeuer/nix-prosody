@@ -11,12 +11,11 @@ in
         enabled = true;
       };
     };
-
     admins = [
       "admin@${domain}"
     ];
-
     allowRegistration = true;
+    httpFileShare.domain = "uploads.${domain}";
 
     muc = [
       {
