@@ -29,5 +29,9 @@
 
     networkmanager.enable = true;
     hostName = "tulip-utahlite13742";
+
+    firewall = {
+      allowedTCPPorts = [ 80 443 ];
+    };
   };
 }
