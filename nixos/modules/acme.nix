@@ -13,10 +13,6 @@ in
         inherit domain;
         webroot = "/var/www/${domain}";
         email = "zornfeuer@i2pmail.org";
-        extraDomainNames = [
-          "conference.${domain}"
-          "upload.${domain}"
-        ];
       };
     };
   };
