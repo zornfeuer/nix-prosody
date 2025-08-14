@@ -6,7 +6,8 @@ in
     acceptTerms = true;
     default.email = "zornfeuer@i2pmail.org";
     certs = {
-      inherit domain; = {
+      "boltanka.tech" = {
+        inherit domain;
         webroot = "/var/www/${domain}";
         extraDomainNames = [
           "conference.${domain}"
