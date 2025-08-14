@@ -4,24 +4,25 @@ in
 {
   services.prosody = {
     enable = true;
+    admins = [ "admin@${domain}" ];
+    ssl.cert = "/var/lib/acme/${domain}/fullchain.pem"
+    ssl.key = "/var/lib/acme/${domain}/key.pem"
+    allowRegistration = true;
 
     virtualHosts = {
       boltanka = {
-        inherit domain;
         enabled = true;
+        inherit domain;
+        ssl.cert = "/var/lib/acme/${domain}/fullchain.pem"
+        ssl.key = "/var/lib/acme/${domain}/key.pem"
       };
     };
-    admins = [
-      "admin@${domain}"
-    ];
-    allowRegistration = true;
-    httpFileShare.domain = "uploads.${domain}";
-
     muc = [
       {
         name = "ChatRooms on ${domain}";
         domain = "conference.${domain}";
       }
     ];
+    uploadHttp.domain = "uploads.${domain}";
   };
 }
