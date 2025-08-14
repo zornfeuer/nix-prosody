@@ -4,6 +4,7 @@ in
 {
   security.acme = {
     acceptTerms = true;
+    useRoot = true;
     certs = {
       "boltanka.tech" = {
         inherit domain;
