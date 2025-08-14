@@ -1,6 +1,6 @@
 {
   imports = [
-    #./acme.nix
+    ./acme.nix
     ./boot.nix
     ./gc.nix
     ./network.nix

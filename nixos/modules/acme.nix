@@ -4,7 +4,6 @@ in
 {
   security.acme = {
     acceptTerms = true;
-    useRoot = true;
     defaults = {
       email = "zornfeuer@i2pmail.org";
     };
@@ -12,7 +11,10 @@ in
       "boltanka.tech" = {
         inherit domain;
         webroot = "/var/www/${domain}";
-        email = "zornfeuer@i2pmail.org";
+        extraDomainNames = [
+          "conference.${domain}"
+          "upload.${domain}"
+        ];
       };
     };
   };
