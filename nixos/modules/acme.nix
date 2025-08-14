@@ -21,7 +21,4 @@ in
   systemd.tmpfiles.rules = [
     "d /var/lib/acme/acme-challenges 0755 acme acme -"
   ];
-
-  services.nginx.enable = true;  # For ACME-challenges trough HTTP
-  users.users.nginx.extraGroups = [ "acme" ];
 }
