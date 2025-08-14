@@ -9,7 +9,7 @@ in
       email = "zornfeuer@i2pmail.org";
     };
     certs = {
-      "test.boltanka.tech" = {
+      "boltanka.tech" = {
         inherit domain;
         webroot = "/var/www/${domain}";
         email = "zornfeuer@i2pmail.org";
