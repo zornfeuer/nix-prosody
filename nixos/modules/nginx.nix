@@ -5,7 +5,7 @@ in
   services.nginx = {
     enable = true;
     virtualHosts."${domain}" = {
-      useACMEHost = true;
+      enableACME = true;
     };
   };
 
