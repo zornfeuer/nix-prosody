@@ -1,6 +1,5 @@
 let
   domain = "test.boltanka.tech";
-  inherit domain;
   certDir = "/var/lib/acme/${domain}";
 in
 {
