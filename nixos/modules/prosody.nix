@@ -8,7 +8,6 @@ in
     admins = [ "admin@${domain}" ];
     ssl.cert = "${certDir}/fullchain.pem";
     ssl.key = "${certDir}/key.pem";
-    ssl.legacySSLFiles = true;
     allowRegistration = true;
 
     virtualHosts.${domain} = {
