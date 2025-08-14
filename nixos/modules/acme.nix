@@ -5,7 +5,7 @@ in
   security.acme = {
     acceptTerms = true;
     useRoot = true;
-    default = {
+    defaults = {
       email = "zornfeuer@i2pmail.org";
     };
     certs = {
