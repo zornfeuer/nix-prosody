@@ -12,6 +12,7 @@ in
 
     virtualHosts.${domain} = {
       enabled = true;
+      domain = "${domain}";
       ssl = {
         cert = "${certDir}/full.pem";
         key = "${certDir}/key.pem";
