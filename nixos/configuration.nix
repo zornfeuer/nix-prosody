@@ -10,7 +10,4 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   system.stateVersion = "25.05";
-
-  services.nginx.enable = true;  # Для ACME-challenges через HTTP
-  networking.firewall.allowedTCPPorts = [ 80 443 ];  # Открываем порты ACME
 }

@@ -1,19 +1,19 @@
 let
   domain = "test.boltanka.tech";
+  inherit domain;
   certDir = "/var/lib/acme/${domain}";
 in
 {
   services.prosody = {
     enable = true;
     admins = [ "admin@${domain}" ];
-    ssl.cert = "${certDir}/full.pem";  # Опечатка? fullchain->full
+    ssl.cert = "${certDir}/fullchain.pem";
     ssl.key = "${certDir}/key.pem";
-    ssl.legacySSLFiles = true;  # Разрешаем использование самоподписанных сертификатов (fallback)
+    ssl.legacySSLFiles = true;
     allowRegistration = true;
 
-    virtualHosts.${domain} = {  # Опечатка? boltanka->test.boltanka
+    virtualHosts.${domain} = {
       enabled = true;
-      domain = "${domain}";
       ssl = {
         cert = "${certDir}/full.pem";
         key = "${certDir}/key.pem";
@@ -29,6 +29,5 @@ in
     uploadHttp.domain = "upload.${domain}";
   };
 
-  # Даём Prosody доступ.
   users.users.prosody.extraGroups = [ "acme" ];
 }
