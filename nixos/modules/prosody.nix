@@ -8,6 +8,7 @@ in
     admins = [ "admin@${domain}" ];
     ssl.cert = "${certDir}/full.pem";  # Опечатка? fullchain->full
     ssl.key = "${certDir}/key.pem";
+    ssl.legacySSLFiles = true;  # Разрешаем использование самоподписанных сертификатов (fallback)
     allowRegistration = true;
 
     virtualHosts.${domain} = {  # Опечатка? boltanka->test.boltanka
