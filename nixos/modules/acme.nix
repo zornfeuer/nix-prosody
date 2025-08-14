@@ -5,8 +5,11 @@ in
   security.acme = {
     acceptTerms = true;
     useRoot = true;
+    default = {
+      email = "zornfeuer@i2pmail.org";
+    };
     certs = {
-      "boltanka.tech" = {
+      "test.boltanka.tech" = {
         inherit domain;
         webroot = "/var/www/${domain}";
         email = "zornfeuer@i2pmail.org";
