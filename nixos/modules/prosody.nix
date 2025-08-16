@@ -29,7 +29,7 @@ in
     uploadHttp.domain = "upload.${domain}";
     httpFileShare = {
       domain = "upload.${domain}";
-      size_limit = 10 * 1024 * 1024;
+      size_limit = "10 * 1024 * 1024";
       expires_adter = "1 week";
     };
   };
