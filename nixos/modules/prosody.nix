@@ -1,5 +1,5 @@
 let
-  domain = "test.boltanka.tech";
+  domain = "boltanka.tech";
   certDir = "/var/lib/acme/${domain}";
 in
 {

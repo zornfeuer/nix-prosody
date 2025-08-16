@@ -1,5 +1,5 @@
 let
-  domain = "test.boltanka.tech";
+  domain = "boltanka.tech";
 in
 {
   security.acme = {
