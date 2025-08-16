@@ -9,5 +9,5 @@ in
     };
   };
 
-  users.users.nginx.extraGroups = [ "acme" ];
+  users.users.nginx.extraGroups = [ "prosody" "acme" ];
 }

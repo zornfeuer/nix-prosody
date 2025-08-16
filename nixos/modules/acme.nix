@@ -13,6 +13,7 @@ in
         "conference.${domain}"
         "upload.${domain}"
       ];
+      group = "prosody";
     };
   };
 

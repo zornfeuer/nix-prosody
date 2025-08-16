@@ -28,5 +28,5 @@ in
     uploadHttp.domain = "upload.${domain}";
   };
 
-  users.users.prosody.extraGroups = [ "acme" "nginx" ];
+  users.users.prosody.extraGroups = [ "acme" ];
 }
