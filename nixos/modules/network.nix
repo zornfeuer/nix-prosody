@@ -31,7 +31,7 @@
     hostName = "tulip-utahlite13742";
 
     firewall = {
-      allowedTCPPorts = [ 80 443 ];
+      allowedTCPPorts = [ 80 443 5222 ];
     };
   };
 }
