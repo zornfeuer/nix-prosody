@@ -9,7 +9,7 @@ in
 {
   services.prosody = {
     enable = true;
-    package = pkgs.prosod.override {
+    package = pkgs.prosody.override {
       withCommunityModules = [ "http_upload" ];
     };
     admins = [ "admin@${domain}" ];
