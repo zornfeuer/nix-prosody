@@ -34,8 +34,8 @@ in
       motd = true;
     };
     extraConfig = ''
-      motd_text = [[Добро пожаловать на Болтанку!\n 
-      Основные комнаты:\n
+      motd_text = [[Добро пожаловать на Болтанку! 
+      Основные комнаты:
       - main@conference.boltanka.tech
       ]]
     '';
