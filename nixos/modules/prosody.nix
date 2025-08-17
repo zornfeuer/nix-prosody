@@ -34,7 +34,7 @@ in
     ];
 
     httpFileShare = {
-      domain = "uploads.${domain}"
+      domain = "uploads.${domain}";
     };
   };
 
