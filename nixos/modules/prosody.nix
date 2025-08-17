@@ -26,12 +26,19 @@ in
       }
     ];
 
-    uploadHttp.domain = "upload.${domain}";
-    httpFileShare = {
+    uploadHttp = {
       domain = "upload.${domain}";
-      size_limit = 10 * 1024 * 1024;
-      expires_adter = "1 week";
     };
+
+    modules = {
+      motd = true;
+    };
+    extraConfig = ''
+      motd_text = [[Добро пожаловать на Болтанку!\n 
+      Основные комнаты:\n
+      - main@conference.boltanka.tech
+      ]]
+    '';
   };
 
   users.users.prosody.extraGroups = [ "acme" ];
