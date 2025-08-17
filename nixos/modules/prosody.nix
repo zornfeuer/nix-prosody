@@ -10,7 +10,7 @@ in
   services.prosody = {
     enable = true;
     package = pkgs.prosody.override {
-      withCommunityModules = [ "http_upload" ];
+      withCommunityModules = [ "http_file_share" ];
     };
     admins = [ "admin@${domain}" ];
     ssl.cert = "${certDir}/fullchain.pem";
@@ -33,19 +33,9 @@ in
       }
     ];
 
-    uploadHttp = {
-      domain = "upload.${domain}";
+    httpFileShare = {
+      domain = "uploads.${domain}"
     };
-
-    modules = {
-      motd = true;
-    };
-    extraConfig = ''
-      motd_text = [[Добро пожаловать на Болтанку! 
-      Основные комнаты:
-      - main@conference.boltanka.tech
-      ]]
-    '';
   };
 
   users.users.prosody.extraGroups = [ "acme" ];
