@@ -1,3 +1,7 @@
+{
+  pkgs,
+  ...
+}:
 let
   domain = "boltanka.tech";
   certDir = "/var/lib/acme/${domain}";
@@ -5,6 +9,9 @@ in
 {
   services.prosody = {
     enable = true;
+    package = pkgs.prosod.override {
+      withCommunityModules = [ "http_upload" ];
+    };
     admins = [ "admin@${domain}" ];
     ssl.cert = "${certDir}/fullchain.pem";
     ssl.key = "${certDir}/key.pem";
