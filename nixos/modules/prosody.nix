@@ -10,7 +10,7 @@ in
   services.prosody = {
     enable = true;
     package = pkgs.prosody.override {
-      withCommunityModules = [ "http_file_share" ];
+      withCommunityModules = [ "http_upload" ];
     };
     admins = [ "admin@${domain}" ];
     ssl.cert = "${certDir}/fullchain.pem";
