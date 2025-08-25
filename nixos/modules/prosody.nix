@@ -32,10 +32,6 @@ in
         domain = "conference.${domain}";
       }
     ];
-
-    httpFileShare = {
-      domain = "upload.${domain}";
-    };
   };
 
   users.users.prosody.extraGroups = [ "acme" ];
