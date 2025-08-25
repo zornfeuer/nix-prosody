@@ -33,9 +33,6 @@ in
       }
     ];
 
-    uploadHttp = {
-      domain = "upload.${domain}";
-    };
     httpFileShare = {
       domain = "upload.${domain}";
     };
