@@ -9,6 +9,9 @@ in
 {
   services.prosody = {
     enable = true;
+    package = pkgs.prosody.override {
+      withCommunityModules = [ "http_file_share" ];
+    };
     admins = [ "admin@${domain}" ];
     ssl.cert = "${certDir}/fullchain.pem";
     ssl.key = "${certDir}/key.pem";
@@ -29,6 +32,9 @@ in
         domain = "conference.${domain}";
       }
     ];
+    httpFileShare = {
+      domain = "upload.${domain}";
+    };
   };
 
   users.users.prosody.extraGroups = [ "acme" ];
