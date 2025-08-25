@@ -9,9 +9,6 @@ in
 {
   services.prosody = {
     enable = true;
-    package = pkgs.prosody.override {
-      withCommunityModules = [ "http_file_share" ];
-    };
     admins = [ "admin@${domain}" ];
     ssl.cert = "${certDir}/fullchain.pem";
     ssl.key = "${certDir}/key.pem";
